@@ -3,6 +3,6 @@ nvidia-triton example
 
 # references
 
-[ Optimizing Model Deployments with Triton Model Analyzer](https://www.youtube.com/watch?v=UU9Rh00yZMY)
+[triton-tutorial](https://github.com/triton-inference-server/tutorials)
 
-[Optimizing Real-Time ML Inference with Nvidia Triton Inference Server | DataHour by Sharmili](https://www.youtube.com/watch?v=P7dvC31Ggxk)
+[ Getting Started with NVIDIA Triton Inference Server ](https://www.youtube.com/watch?v=NQDtfSi5QF4)
