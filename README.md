@@ -9,11 +9,13 @@ nvidia-triton example
     ./fetch_models.sh
 
     # Step 2: Launch triton from the NGC Triton container
-    docker run --gpus=1 --rm --net=host -v ${PWD}/model_repository:/models nvcr.io/nvidia/tritonserver:23.08-py3 tritonserver --model-repository=/models
+    sudo docker run --gpus=1 --rm --net=host -v ${PWD}/model_repository:/models nvcr.io/nvidia/tritonserver:23.08-py3 tritonserver --model-repository=/models
 
     # Step 3: Sending an Inference Request
     # In a separate console, launch the image_client example from the NGC Triton SDK container
-    docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:23.08-py3-sdk
+    sudo docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:23.08-py3-sdk
+
+    # Step 4 (Inside the container) Run inference:
     /workspace/install/bin/image_client -m densenet_onnx -c 3 -s INCEPTION /workspace/images/mug.jpg
 
     # Inference should return the following
@@ -21,6 +23,11 @@ nvidia-triton example
         15.346230 (504) = COFFEE MUG
         13.224326 (968) = CUP
         10.422965 (505) = COFFEEPOT
+
+*Note:* required images:
+
+    nvcr.io/nvidia/tritonserver   23.08-py3-sdk                        587bf52f933e   4 weeks ago    10.1GB
+    nvcr.io/nvidia/tritonserver   23.08-py3                            3e96065a3dcc   4 weeks ago    12.4GB
 
 # references
 
