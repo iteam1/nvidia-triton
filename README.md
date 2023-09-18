@@ -29,6 +29,45 @@ nvidia-triton example
     nvcr.io/nvidia/tritonserver   23.08-py3-sdk                        587bf52f933e   4 weeks ago    10.1GB
     nvcr.io/nvidia/tritonserver   23.08-py3                            3e96065a3dcc   4 weeks ago    12.4GB
 
+model_repository
+
+        model_repository
+        ├── densenet_onnx
+        │   ├── 1
+        │   │   └── model.onnx
+        │   ├── config.pbtxt
+        │   └── densenet_labels.txt
+        ├── inception_graphdef
+        │   ├── 1
+        │   │   └── model.graphdef
+        │   ├── config.pbtxt
+        │   └── inception_labels.txt
+        ├── simple
+        │   ├── 1
+        │   │   └── model.graphdef
+        │   └── config.pbtxt
+        ├── simple_dyna_sequence
+        │   ├── 1
+        │   │   └── model.graphdef
+        │   └── config.pbtxt
+        ├── simple_identity
+        │   ├── 1
+        │   │   └── model.savedmodel
+        │   │       └── saved_model.pb
+        │   └── config.pbtxt
+        ├── simple_int8
+        │   ├── 1
+        │   │   └── model.graphdef
+        │   └── config.pbtxt
+        ├── simple_sequence
+        │   ├── 1
+        │   │   └── model.graphdef
+        │   └── config.pbtxt
+        └── simple_string
+            ├── 1
+            │   └── model.graphdef
+            └── config.pbtxt
+
 # references
 
 [triton-inference-server/user-guide](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/getting_started/quickstart.html)
